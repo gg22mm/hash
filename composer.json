@@ -1,0 +1,22 @@
+{
+    "name": "wll/hash",
+    "type": "library",
+	"description": "php-bcrypt",
+    "require": {
+        "php": ">=7.0"
+    },
+	"keywords":["php","hyperf","laravel","bcrypt","argon"],
+    "license":"MIT",
+    "authors": [
+        {
+            "name": "gg22mm",
+            "email": "gg22mm@qq.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Wll\\Hash\\": "src"
+		}
+	},
+    "minimum-stability": "dev"
+}
