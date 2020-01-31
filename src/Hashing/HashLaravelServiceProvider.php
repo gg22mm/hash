@@ -5,7 +5,7 @@ namespace Wll\Hash\Hashing;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
-class HashServiceProvider extends ServiceProvider implements DeferrableProvider
+class HashLaravelServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Register the service provider.
