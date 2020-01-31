@@ -20,19 +20,20 @@ use Wll\Hash\Hashing\HashHyperfServiceProvider;		//hyperf 中使用
 //use Wll\Hash\Hashing\HashLaravelServiceProvider;  //laravel 中使用 然当也可以用app()方式调用
 //use Wll\Hash\Hashing\HashPhpServiceProvider;		//php 中使用
 
-$hashHyperfServiceProvider=new HashHyperfServiceProvider();
-$hash=$hashHyperfServiceProvider->register();
-
-//生成加密密码
-$pass=$hash->make('123456');
-
-//验证密码是否正确
-if ($hash->check('123456', $pass)) {
-   // 密码匹配正确…  
-   $data['state']='密码匹配正确';
+ public function index(){	
+ 
+	$hashHyperfServiceProvider=new HashHyperfServiceProvider();
+	$hash=$hashHyperfServiceProvider->register();
+	
+	//生成加密密码
+	$pass=$hash->make('123456');
+	
+	//验证密码是否正确
+	if ($hash->check('123456', $pass)) {
+	   // 密码匹配正确…  
+	   $data['state']='密码匹配正确';
+	}
+	$data['pass']=$pass;
+	
+	return $data; 
 }
-$data['pass']=$pass;
-
-return $data; 
-
-
