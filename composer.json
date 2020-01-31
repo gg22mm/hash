@@ -18,5 +18,10 @@
 			"Wll\\Hash\\": "src"
 		}
 	},
+	"extra": {
+        "hyperf": {
+            "config": "Wll\\Hash\\ConfigProvider"
+        },
+		
     "minimum-stability": "dev"
 }

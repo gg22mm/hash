@@ -7,13 +7,21 @@ class HashHyperfServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register($app = [])
     {
-
         // $app['hash']->driver();
-        $app=[];
+        if (!$app) {
+            $app['config']['driver'] = config('hashing.driver', 'bcrypt');
+            $app['config']['hashing.bcrypt'] = [
+                'rounds' => config('hashing.bcrypt.rounds', '10'),
+            ];
+            $app['config']['hashing.argon'] = [
+                'memory' => config('hashing.argon.memory', '1024'),
+                'threads' => config('hashing.argon.threads', '2'),
+                'time' => config('hashing.argon.time', '2'),
+            ];
+        }		
         return new HashManager($app);
-
     }
 
     /**
@@ -26,3 +34,4 @@ class HashHyperfServiceProvider
         return ['hash', 'hash.driver'];
     }
 }
+?>
