@@ -1,5 +1,5 @@
 # Hashing
-Bcrypt,Argon不可逆哈希加密,从laravel的： illuminate/hashing  包中提取出来,用于php 比如hyperf框架，其它非框架也可以
+Bcrypt,Argon不可逆哈希加密,从laravel的： illuminate/hashing  包中提取出来,用于php 比如hyperf框架，其它非框架也可以。方便框架相互通用
 
 ## 基本使用
 
